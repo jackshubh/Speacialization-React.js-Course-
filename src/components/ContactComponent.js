@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Breadcrumb, BreadcrumbItem, Form, FormGroup, Button, Label, Input, Col, Row, FormFeedback } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem, Form, FormGroup, Button, Label, Input, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 class Contact extends Component{
@@ -28,7 +28,7 @@ class Contact extends Component{
     handleBlur = (field) => (evt) => {
         this.setState({
             touched: { ...this.state.touched, [field]: true }
-        });
+        })
     }
     validate(firstname, lastname, telnum, email) {
         const errors = {
