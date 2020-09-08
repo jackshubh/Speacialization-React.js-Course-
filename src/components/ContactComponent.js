@@ -9,24 +9,6 @@ const minLength = (len) => (val) => val && (val.length >= len);
 const isNumber = (val) => !isNaN(Number(val));
 const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
 
-const ErrorFucntion =(model,minLength,maxLength,isNumber,validEmail) =>{
-    return(
-        <Errors
-            className="text-danger"
-            model={model}
-            show="touched"
-            messages={{
-                required: 'Required',
-                minLength: {minLength},
-                maxLength: {maxLength},
-                isNumber: {isNumber},
-                validEmail: {validEmail}
-            }}
-        />
-    );
-}
-
-
 class Contact extends Component{
     constructor(props){
         super(props);
