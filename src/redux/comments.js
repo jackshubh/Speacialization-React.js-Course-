@@ -7,6 +7,8 @@ export const Comments = (state = COMMENTS, action) => {
       var comment = action.payload; // This I got from ActionCreators(object which contains the value of a new comment)
       comment.id = state.length;
       comment.Date = new Date().toISOString(); // This i am creating a date and adding into comment object as property
+      //comment.Date = new Date("September 15, 2020 10:07:32");
+      console.log(new Date());
       //comment.Date = "2014-09-05T17:57:28.556094Z";
       console.log("Comment: ", comment);
       return state.concat(comment); // or I can write like this return [...state, comment]
