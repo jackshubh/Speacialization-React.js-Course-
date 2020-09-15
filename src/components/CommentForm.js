@@ -38,8 +38,6 @@ class CommentForm extends Component {
       values.author,
       values.comment
     );
-    // console.log("Current State is: " + JSON.stringify(values));
-    // alert("Current State is: " + JSON.stringify(values));
   }
 
   render() {
