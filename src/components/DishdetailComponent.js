@@ -29,7 +29,7 @@ function RenderDish({ dish }) {
   }
 }
 
-function RenderComments({ comments, addComment, dishId }) {
+function RenderComments({ comments, postComment, dishId }) {
   if (comments != null) {
     var commentList = comments.map((comment) => {
       return (
@@ -53,7 +53,7 @@ function RenderComments({ comments, addComment, dishId }) {
       <div>
         <h4>Comments</h4>
         <ul className="list-unstyled">{commentList}</ul>
-        <CommentForm dishId={dishId} addComment={addComment} />
+        <CommentForm dishId={dishId} postComment={postComment} />
       </div>
     );
   }
@@ -95,7 +95,7 @@ function DishDetail(props) {
           <div className="col-12 col-md-5 m-1">
             <RenderComments
               comments={props.comments}
-              addComment={props.addComment}
+              postComment={props.postComment}
               dishId={props.dish.id}
             />
             {/* //The above parameter: 1. takes all the comments, 2.pass the new comment which needs to be added, 3.Passed the dishId where it needs to be added */}
