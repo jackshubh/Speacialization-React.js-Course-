@@ -26,7 +26,6 @@ function RenderMenuItem({ dish }) {
 
 function Menu(props) {
   const dishes = props.dishes;
-  console.log("This is my comment from menu", dishes);
   const menu = dishes.dishes.map((dish) => {
     if (props.dishes.isLoading) {
       return (

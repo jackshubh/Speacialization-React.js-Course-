@@ -103,7 +103,6 @@ export const postComment = (dishId, rating, author, comment) => (dispatch) => {
 
 export const fetchLeaders = () => (dispatch) => {
   dispatch(leadersLoading(true));
-
   return fetch(baseUrl + "leaders")
     .then(
       (response) => {

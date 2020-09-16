@@ -63,10 +63,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.props.fetchDishes();
     this.props.fetchComments();
@@ -99,7 +95,7 @@ class Main extends Component {
 
     const DishWithId = ({ match }) => {
       //{match, location, history} but we ignore location and history
-      
+
       return (
         <DishDetail
           dish={

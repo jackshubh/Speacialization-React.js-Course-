@@ -45,7 +45,6 @@ function RenderCard({ item, isLoading, errMess }) {
 function Home(props) {
   return (
     <div className="container">
-      {console.log("This is home", props)}
       <div className="row align-items-start">
         <div className="col-12 col-md m-1">
           <RenderCard
